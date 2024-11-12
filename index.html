@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7-kun</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #404258;
+        margin: 0;
+      }
+
+      .chiziq {
+        position: relative;
+        width: 4px;
+        height: 200px;
+        background-color: white;
+        transform: rotate(60deg);
+      }
+
+      .box {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        border: 2px solid white;
+        top: 100%;
+        left: -400%;
+        transform: translate(-50%, -80%);
+        animation: roll 6s infinite ease-in-out;
+      }
+
+      @keyframes roll {
+        0% {
+          top: 100%;
+          transform: translate(-50%, -100%) rotate(-350deg);
+        }
+        50% {
+          top: 0;
+          transform: translate(-50%, -100%) rotate(50deg);
+        }
+        100% {
+          top: 100%;
+          transform: translate(-50%, -100%) rotate(-360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chiziq">
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
